@@ -1,0 +1,33 @@
+label{
+    width: 80%;
+    text-align: left;
+    font-family: 'ubuntu';
+}
+.radd-cont{
+    width: 120%;
+    text-align: left;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-left: 150px;
+}
+.radd{
+    display: none;
+}
+.radd-cont>label{
+    margin-right: 200px;
+    border: 1px solid;  
+    padding: 3px;
+    transition: border-color 0.3s linear;  
+    transition: color 0.3s linear;
+
+}
+.radd-cont>label:hover{
+    border-color: skyblue;
+    color: skyblue ;
+}
+.selected{
+    color: skyblue ;
+}
+.cert{
+    padding-bottom: 20px;
+}

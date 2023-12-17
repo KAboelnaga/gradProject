@@ -1,0 +1,42 @@
+.mainheader{
+    display: flex;
+    justify-content: center;
+    font-family: 'Bebas Neue';
+    font-size: 80px;
+    color:  #3b9db8;
+}
+
+.subheader{
+    display: flex;
+    justify-content: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 30px;
+    
+}
+.personimage{
+    padding-left: 60px;
+    max-height: 440px;
+}
+.name{
+    padding-left: 70px;
+    font-family: 'Barlow';
+    font-size: 20px;
+}
+.type{
+    display: flex;
+    justify-content: center;
+    font-family: 'Bebas Neue';
+    font-size: 70px;
+}
+.button{
+    margin-left: 70px;
+    justify-content: center;
+}
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+}
+.cards div {
+    text-align: center;
+    margin: 10px;
+  }

@@ -1,11 +1,45 @@
-.App {
-  text-align: center;
+.logo{
+  margin-left: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: 40px;
 }
+.nav-item{
+  padding-top: 20px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  font-size: 24px;
+  font-family: 'Bebas Neue', Courier, monospace;
+  text-decoration-line: none;
+  text-transform: capitalize;
+  color: rgb(255, 255, 255);
+  transition: color 0.5s ease;
+}
+.nav-item:hover{
+  color: #61dafb;
+}
+.active{
+  color: #3b9db8;
+}
+.rlogo{
+  padding-top: 0px;
+  height: 80px;
+}
+.rlogo img{
+  padding-top: 0px;
+  max-height: 100%;
+}
+.special{
+  margin-top: 40px;
+  margin-left: -150px;
+  font-family: 'Montserrat';
+  font-weight: 500;
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -21,18 +55,9 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
