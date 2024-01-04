@@ -1,42 +1,46 @@
 .mainheader{
     display: flex;
     justify-content: center;
-    font-family: 'Bebas Neue';
+    font-family: 'Orbitron';
     font-size: 80px;
-    color:  #3b9db8;
+    color:  #00b2e3;
 }
 
 .subheader{
     display: flex;
     justify-content: center;
-    font-family: 'Barlow', sans-serif;
+    align-items: center;
+    font-family: 'oswald', sans-serif;
     font-size: 30px;
     
 }
 .personimage{
-    padding-left: 60px;
-    max-height: 440px;
+
+    max-width: 100%;
 }
 .name{
-    padding-left: 70px;
+
     font-family: 'Barlow';
     font-size: 20px;
+    font-weight: 800;
 }
 .type{
-    display: flex;
-    justify-content: center;
+    text-align: center;
     font-family: 'Bebas Neue';
+    color:  #adaeae;
     font-size: 70px;
 }
 .button{
-    margin-left: 70px;
+
     justify-content: center;
 }
 .cards{
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 .cards div {
     text-align: center;
     margin: 10px;
   }
+

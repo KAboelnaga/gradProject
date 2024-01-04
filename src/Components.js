@@ -94,7 +94,7 @@ export const Button = styled.button`
 `;
 export const GhostButton = styled(Button)`
 background-color: transparent;
-border-color: #ffffff;
+border-color: #FFFFFF;
 `;
 
 export const Anchor = styled.a`

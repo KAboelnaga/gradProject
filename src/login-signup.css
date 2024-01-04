@@ -4,30 +4,70 @@ label{
     font-family: 'ubuntu';
 }
 .radd-cont{
-    width: 120%;
+    display: flex;
+    justify-content: space-between;
+    gap: 150px;
     text-align: left;
-    padding-bottom: 20px;
-    padding-top: 10px;
-    padding-left: 150px;
 }
 .radd{
     display: none;
+
 }
 .radd-cont>label{
-    margin-right: 200px;
-    border: 1px solid;  
-    padding: 3px;
+    padding: 2px;
+    border: 1px solid;
+    border-color: #FFF;
     transition: border-color 0.3s linear;  
     transition: color 0.3s linear;
+    margin-bottom: 10px;
 
 }
 .radd-cont>label:hover{
     border-color: skyblue;
     color: skyblue ;
 }
-.selected{
+label.selected{
+    border-color: skyblue;
     color: skyblue ;
+    font-weight: 600;
 }
 .cert{
     padding-bottom: 20px;
+}
+.spacee{
+    height: 700px;
+}
+.small{
+    display: none;
+}
+@media  (max-width: 768px){
+    .large{
+        display: none;
+    }
+    .small{
+        display: block;
+    }
+    .bn40 {
+        font-weight: 600;
+        font-size: large;
+        padding: 4px 6px;
+        color: #ffffff !important;
+      }
+
+
+      .bn40::after {
+
+        height: 2px;
+        display: block;
+        content: "";
+        background: linear-gradient(-90deg, #ff9100 0%, #f10366 50%, #6173ff 100%);
+        opacity: 1;
+        margin-bottom: -6px;
+        margin-top: 1px;
+      }
+      
+      .bn40div {
+        display: flex;
+      }
+      
 }

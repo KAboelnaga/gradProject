@@ -1,72 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Bebas+Neue&family=Black+Ops+One&family=Montserrat:wght@500&family=Orbitron&family=Oswald:wght@700&family=Roboto:wght@100&family=Rubik+Doodle+Shadow&family=Rubik:wght@300&family=Russo+One&family=Ubuntu:wght@300&display=swap');
 body{
     
-    background-color: rgb(27, 27, 27);
+    background-color: rgb(35, 35, 35);
     color: white;
 }
-
-.logo{
-    max-height: 440px;
-}
-.subtitle{
-    text-align: left;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 70px;
-    color:  #3b9db8;;
-}
-.maintext{
-    text-align: left;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 30px;
-
-}
-
 .intro{
     display: flex;
     justify-items: space-evenly;
+
+}
+#animatedXray{
+    height: 45vh;
+}
+.intro .title1{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5vw;
+
+    color:  #00b2e3;
+}
+.text1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5vw;
+    
+
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Bebas+Neue&family=Montserrat:wght@500&family=Roboto:wght@100&family=Ubuntu:wght@300&display=swap');
-.intro .maintitle{
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 80px;
-    color:  #3b9db8;
-}
-.intro .maintext{
-    font-family: 'Barlow', sans-serif;
-    padding-right: 150px;
-}
-.info{
-    display: flex;
-    justify-content: space-evenly;
-    padding-bottom: 40px;
-  }
-.subtext{
-    font-family: 'Barlow';
-    font-size: 20px;
-}
 .horizontal-line {
     position: relative;
-    width: 450px; /* Adjusted to match the image width */
-    height: 2px;
-    margin-left: 40px; /* Center the line horizontally */
+    width: 48vh;
+    height: 0.2vh;
+    margin-left: 2.6vh;
     background-color: rgb(0, 200, 255,1);
-    box-shadow: 0 0 10px rgba(0, 200, 255, 0.4);
+    box-shadow: 0 0 0.1rem rgba(0, 200, 255, 0.4);
     animation: moveLine 6s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
     overflow: hidden;
-    border: 3px solid rgb(177, 177, 177); /* Set the border initially to transparent */
+    border: 0.06rem solid rgb(177, 177, 177); /* Set the border initially to transparent */
     border-image: gradient((177, 177, 177) 0%, transparent 100%); /* Create a fading border gradient */
     border-image-slice: 1; /* Define the border image slice */
 }
 
 .horizontal-line::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%; /* Move the starting point off-screen to the left */
-    width: 100%;
-    height: 100%;
-    background-image: url('xray.png'); /* Replace with your image URL */
-    mix-blend-mode: screen; /* Change blend mode to achieve X-ray effect */
+    
+    background-image: "xray.png";
+    mix-blend-mode: screen;
 }
 
 @keyframes moveLine {
@@ -74,12 +50,131 @@ body{
         transform: translateY(0%);
     }
     50%{
-        transform: translateY(420px);
+        transform: translateY(45vh);
     }
     100%{
         transform: translateY(0%);
     }
 }
-.end1{
-    margin-left: 50px;
+  .title {
+    text-align: center;
+    font-family: 'Bebas Neue';
+    font-size: 3dvw;
+    color:  #00b2e3;
+    margin-bottom: 1rem;
+  }
+  .mainText{
+    width: 95%;
+    font-family: 'Montserrat';
+    font-size: 1.5vh;
+    margin-left: 2vw;
+  }
+  
+.flexx{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.flexx img{
+   width: fit-content;
+   height: 30vh;
+}
+.flexx p{
+    text-align: center;
+    font-family: "montserrat";
+    font-size: 1.75vw;
+}
+.header{
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 50px;
+    color:  #00b2e3;
+    margin-bottom: 20px;
+
+}
+@media (max-width: 768px) {
+
+    #animatedXray{
+        height: 30vh;
+        margin-left: 5vw;
+    }
+    .horizontal-line {
+        position: relative;
+        width: 30vh;
+        height: 0.2vh;
+        background-color: rgb(0, 200, 255,1);
+        box-shadow: 0 0 0.1rem rgba(0, 200, 255, 0.4);
+        animation: moveLine 6s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+        overflow: hidden;
+        border: 0.06rem solid rgb(177, 177, 177); /* Set the border initially to transparent */
+        border-image: gradient((177, 177, 177) 0%, transparent 100%); /* Create a fading border gradient */
+        border-image-slice: 1; /* Define the border image slice */
+    }
+    
+    .horizontal-line::before {
+        content: '';
+        position: relative;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-image: "xray.png";
+        mix-blend-mode: screen;
+    }
+    #end{
+        margin-left: 10vw;
+    }
+    
+    @keyframes moveLine {
+        0% {
+            transform: translateY(0%);
+        }
+        50%{
+            transform: translateY(30vh);
+        }
+        100%{
+            transform: translateY(0%);
+        }
+    }
+
+  }
+  @media (max-width: 768px) {
+    .intro {
+        margin-left: 8vw;
+      flex-wrap: wrap;
+      
+    }
+    .horizontal-line{
+        margin-left: 18vw;
+    }
+    
+    .intro .title1{
+        font-size: 10vw;
+        
+      }
+    .text1{
+        font-size: 5vw;
+
+    }
+    .flexx{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .flexx div{
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .flexx img{
+        height: 25vh;
+    }
+    .flexx p{
+        font-size: 6vw;
+    }
+    .text{
+        margin-left: 6vw;
+    }
 }

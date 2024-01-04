@@ -30,7 +30,8 @@ const AuthForm = () => {
   };
 const [signIn, toggle] = React.useState(true);
 return(
-    <Components.Container>
+  <div>
+    <Components.Container className='large' >
         <Components.SignUpContainer signinIn={signIn}>
             <Components.Form>
                 <Components.Title>Create Account</Components.Title>
@@ -92,7 +93,7 @@ return(
                  <label>Password</label>
                  <Components.Input type='password' placeholder='Password' />
                  <Components.Anchor href='#'>Forgot your password?</Components.Anchor>
-                 <Components.Button>Sigin In</Components.Button>
+                 <Components.Button>Sign In</Components.Button>
              </Components.Form>
         </Components.SignInContainer>
 
@@ -115,7 +116,7 @@ return(
                       New member, Create account and get started!
                   </Components.Paragraphr>
                       <Components.GhostButton onClick={() => toggle(false)}>
-                          Sigin Up
+                          Sign Up
                       </Components.GhostButton> 
                 </Components.RightOverlayPanel>
 
@@ -123,6 +124,15 @@ return(
         </Components.OverlayContainer>
 
     </Components.Container>
+    <div className='small'>
+      <div className="bn40div">
+        <a class="bn40" href="/">Login</a>
+        <a class="bn40" href="/">Signup</a>
+      </div>
+    </div>
+    <div className='spacee'></div>
+    
+    </div>
 )
 }
 export default AuthForm;
