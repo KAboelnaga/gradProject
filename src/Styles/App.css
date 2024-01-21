@@ -38,8 +38,13 @@
 .light .nav-item{
   color: black;
 }
-.navbar .icon {
-  display: none;
+.navbar div{
+  display: flex;
+  flex-wrap: nowrap;
+
+}
+.light .icon{
+  color: white;
 }
 #login{
   display: flex;
@@ -66,6 +71,9 @@
 .rlogo{
   padding-top: 0px;
   height: 80px;
+}
+.hidden{
+  display: none;
 }
 .rlogo img{
   padding-top: 0px;
@@ -115,6 +123,11 @@
 #dark{
   height: 30px;
 }
+.icon{
+  color: white;
+  margin-right: 0.2rem;
+  height: 30px;
+}
 
 .App-link {
   color: #61dafb;
@@ -133,6 +146,10 @@
     margin-bottom: 50px;
     z-index: 6;
   }
+  .hidden{
+    display: none;
+  }
+
   #space{
     padding-bottom: 10rem;
   }
@@ -157,7 +174,9 @@
 
 
   }
-  
+  .nav-item.hidden{
+    display: none;
+  }
   .hamburger {
     position: fixed;
     right: 0;
