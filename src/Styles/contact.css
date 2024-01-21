@@ -2,10 +2,12 @@
     display: flex;
     justify-content: center;
     font-family: 'Orbitron';
-    font-size: 80px;
+    font-size: 60px;
     color:  #00b2e3;
 }
-
+h4{
+    margin: 20px;
+}
 .subheader{
     display: flex;
     justify-content: center;

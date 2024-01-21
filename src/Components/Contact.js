@@ -1,5 +1,5 @@
-import './contact.css';
-import * as Components from './Components';
+import '../Styles/contact.css';
+import * as Components from './Components.js';
 const EmailButton = ({ recipientEmail,name}) => {
     const handleSendEmail = () => {
       const subject = 'Feedback';

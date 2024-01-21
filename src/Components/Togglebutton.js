@@ -1,6 +1,6 @@
 // ToggleButton.js
 import React, { useEffect } from 'react';
-import './toggle-button.css';
+import './Styles/toggle-button.css';
 
 const ToggleButton = () => {
   const st = {};
