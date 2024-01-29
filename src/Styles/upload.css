@@ -1,127 +1,147 @@
-label{
-    width: 80%;
-    text-align: left;
-    font-family: 'ubuntu';
+.main{
+    width: 100%;
 }
-.radd-cont{
+#container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#uploaded-image{
+    max-width:20 rem;
+    
+}
+.dropzone-box {
+    border-radius: 2rem;
+    padding: 2rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    display: flex;
+    justify-content: center;
+    max-width: 36 rem;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(20, 20, 20);
+    color: white;
+}
+.light .dropzone-box{
+    background-color: white;
+    color: black;
+    box-shadow: rgba(83, 83, 83, 0.2) 0px 8px 24px;
+}
+.dropzone-box h2 {
+    font-size: 2rem;
+    font-family: 'Orbitron','sans-serif';
+    margin-bottom: 0.5rem;
+}
+
+.dropzone-area {
+    padding: 1rem;
+    position: relative;
+    margin-top: 1rem;
+    min-height: 16rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px dashed var(--primary);
+    border-radius: 1rem;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.dropzone-area [type="file"] {
+    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.dropzone-area .file-upload-icon svg {
+    height: 5rem;
+    width: 5rem;
+    margin-bottom: 0.5rem;
+    stroke: var(--primary);
+}
+
+.dropzone--over {
+    border-style: solid;
+    background-color: var(--background);
+}
+
+.dropzone-actions {
     display: flex;
     justify-content: space-between;
-    gap: 150px;
-    text-align: left;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--gray);
+    gap: 1rem;
+    flex-wrap: wrap;
 }
-.radd{
+
+.dropzone-actions button {
+    flex-grow: 1;
+    min-height: 3rem;
+    font-size: 1.2rem;
+}
+div#imageContainer{
+    width: 20vw;
+}
+#uploaded-image{
+    max-width: 100%;
+}
+.dropzone-actions button:hover {
+    text-decoration: underline;
+}
+
+.dropzone-actions button[type='reset'] {
+    background-color: transparent;
+    border: 1px solid var(--gray);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.dropzone-actions button[type='submit'] {
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    color: var(--white);
+    cursor: pointer;
+}
+.message{
+    font-style: oblique;
+    font-weight: bold;
+}
+#resetButton{
+    background-color:  lightslategray;
+}
+.light #resetButton{
+    background-color: lightgray;
+}
+#submit-button{
+    background-color: rgb(12, 160, 209);
+}
+.light #submit-button{
+    background-color: skyblue;
+}
+.hidden{
     display: none;
-
 }
-.radd-cont>label{
-    padding: 2px;
-    border: 1px solid;
-    border-color: #FFF;
-    transition: border-color 0.3s linear;  
-    transition: color 0.3s linear;
-    margin-bottom: 10px;
-
+.show{
+    display: block;
 }
-.radd-cont>label:hover{
-    border-color: skyblue;
-    color: skyblue ;
-}
-label.selected{
-    border-color: skyblue;
-    color: skyblue ;
-    font-weight: 600;
-}
-.cert{
-    padding-bottom: 20px;
-}
-.spacee{
-    height: 700px;
-}
-.small{
-    display: none;
-}
-
-@media  (max-width: 768px){
-    .large{
-        display: none;
+@media (max-width: 700px) {
+    .dropzone-box{
+        max-width: 100vw;
     }
-    .small{
-        display: block;
+    div#imageContainer{
+        width: 50vw;
     }
-    .bn40 {
-        font-weight: 600;
-        font-size: large;
-        padding: 4px 6px;
-        color: #ffffff !important;
-      }
-
-
-      .bn40::after {
-
-        height: 2px;
-        display: block;
-        content: "";
-        background: linear-gradient(-90deg, #ff9100 0%, #f10366 50%, #6173ff 100%);
-        opacity: 1;
-        margin-bottom: -6px;
-        margin-top: 1px;
-      }
-      
-      .bn40div {
-        display: flex;
-      }
-      
-}
-.container{
-background-color: #ffffff;
-border-radius: 50px;
-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  overflow: hidden;
-  width: 1000px;
-  max-width: 100%;
-  min-height: 600px;
-}
-.SignUpContainer {
- position: absolute;
- top: 0;
- height: 100%;
- transition: all 0.6s ease-in-out;
- left: 0;
- width: 50%;
-
- z-index: 1;
-}
-.form{
-background-color: #fefefe;
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
-padding: 0 50px;
-height: 100%;
-text-align: center;
-}
-.title{
-    font-family: "ubuntu";
-font-weight: bold;
-margin: 0;
-margin-bottom: 20px;
-color: #ffffff;
-}
-.input{
-    background-color: #181818;
-font-size: 14px;
-color: #ffffff;
-border: none;
-border-radius: 10px;
-padding: 12px 15px;
-margin: 8px 0;
-width: 80%;
-}
-.light{
-    background-color: white;
 }

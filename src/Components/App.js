@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Routes, Route, NavLink, useLocation} from 'react-router-dom';
+
+
 import About from './About';
 import Home from './Home';
 import Contact from './Contact';
@@ -21,8 +23,10 @@ function App() {
     toggleNav()
 }
   return (
+    
     <div className={`App h-full w-full mx-auto 
     ${darkMode ? "dark" : "light"}`}>
+      
       <nav className="navbar">
         <NavLink to="/" className="special">
           <div className="rlogo">
@@ -127,8 +131,9 @@ function App() {
         </nav>
         </nav>
         <div id='space'></div>
+
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home/>} />
         <Route path="/Upload" element={<Upload />} />
         <Route path="/login" element={<Login darkmode={darkMode.toString()} />}/>
         <Route path="/about" element={<About />} />

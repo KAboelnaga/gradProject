@@ -1,10 +1,21 @@
-import React, { useState } from 'react';
-
+import React, { useState, useContext} from 'react';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import * as Components from './Components.js';
+import { AuthContext } from './AuthContext';
 import '../Styles/login-signup.css';
 const AuthForm = ({darkmode}) => {
-  const [showForm, setShowForm] = React.useState(false);
+  const [showForm, setShowForm] = useState(false);
   const [isDoctor, setIsDoctor] = useState(null);
+  const [loginEmail, setLoginEmail] = useState([]);
+  const [loginPassword, setLoginPassword] = useState([]);
+  const [lmessage, setlMessage] = useState('');
+  const [loginMessage, setLoginMessage] = useState('');
+  const [loginError, setLoginError] = useState([]);
+  const [loginLoading, setLoginLoading] = useState(false);
+  const [loginShow, setLoginShow] = useState(false);
+  const loginNavigate = useNavigate();
+  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -13,6 +24,53 @@ const AuthForm = ({darkmode}) => {
     confirmPassword: '',
     certificateImage: null,
   });
+  const requestLogin = () => {
+    setLoginLoading(true);
+    const endpoint = 'https://sqlify-api-backend.espace.ws/users/sign_in';
+    const data = {
+      user: {
+        loginEmail, loginPassword
+      }
+    };
+    axios
+      .post(endpoint, data)
+      .then(response => {
+        setLoginMessage(response.data.message);
+        setLoginEmail(response.data.user.email);
+        setLoginLoading(false);
+        
+        loginNavigate('Mainpage', {
+          state: {
+            loginEmail
+          }
+        });
+      })
+      .catch(Error => {
+        console.error('Error:', Error.response.data.error);
+        setLoginError(Error.response.data.error);
+        setLoginLoading(false);
+        setLoginShow(true);
+      });
+  };
+  const loginEmailValidation = () => {
+    setlMessage('');
+    setLoginError('');
+    const regEx = /[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,8}(.[a-z{2,8}])?/g;
+    if (regEx.test(loginEmail)) {
+      requestLogin();
+    } else if (!regEx.test(loginEmail) && loginEmail !== '') {
+      setlMessage('Email format is incorrect');
+      setLoginShow(true);
+    } else {
+      setLoginMessage('');
+    }
+  };
+  const handleOnChangeLoginEmail = e => {
+    setLoginEmail(e.target.value);
+  };
+  const handleOnChangeLoginPassword = e => {
+    setLoginPassword(e.target.value);
+  };
 
   const handleRadioChange = (e) => {
     const { value } = e.target;
@@ -29,8 +87,7 @@ const AuthForm = ({darkmode}) => {
       return;
     }
   };
-const [signIn, toggle] = React.useState(true);
-console.log('darkMode in Login.js:', darkmode);
+const [signIn, toggle] = useState(true);
 
 return(
   <div className={`${darkmode === "true"? 'dark' : 'light'}`}>
@@ -85,12 +142,18 @@ return(
         <Components.SignInContainer className='container' signinin={signIn.toString()} dark={darkmode}>
              <Components.Form className='container' dark={darkmode}>
                  <Components.Title dark={darkmode}>Sign in</Components.Title >
+                 {loginMessage}
+          {loginShow}
+            <div>
+              {loginError}
+              {loginMessage}
+            </div>
                  <label>Email</label>
-                 <Components.Input type='email' placeholder='Email' dark={darkmode}/>
+                 <Components.Input type='email' placeholder='Email' dark={darkmode} onChange={handleOnChangeLoginEmail}/>
                  <label>Password</label>
-                 <Components.Input type='password' placeholder='Password' dark={darkmode}/>
+                 <Components.Input type='password' placeholder='Password' dark={darkmode} onChange={handleOnChangeLoginPassword}/>
                  <Components.Anchor href='#' dark={darkmode}>Forgot your password?</Components.Anchor>
-                 <Components.Button dark={darkmode}>Sign In</Components.Button>
+                 <Components.Button dark={darkmode} onClick={loginEmailValidation}>Sign In</Components.Button>
              </Components.Form>
         </Components.SignInContainer>
 

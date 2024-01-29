@@ -1,12 +1,17 @@
 /* Footer.css */
 
 .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: auto;
     background-color: rgb(19, 19, 19);
     padding: 2rem 0;
+    z-index: 999;
   }
   
   .footer img {

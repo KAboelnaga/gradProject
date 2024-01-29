@@ -1,7 +1,12 @@
 import '../Styles/about.css';
+import { Parallax,ParallaxLayer } from '@react-spring/parallax';
+import Footer from './Footer';
 function About() {
+  const viewportWidth = window.innerWidth;
     return (
         <div>
+      <Parallax pages={viewportWidth >= 700 ? 1.5 : 3}>
+        <ParallaxLayer offset={0} speed={0.5}>
       <h1 className='title' id='aboutTitle'>Welcome to PneumoXpert</h1>
       <p className='aboutText'>
         At PneumoXpert, we leverage cutting-edge technology to provide a seamless and efficient way for doctors and patients to upload X-ray images and detect pneumonia disease with precision.
@@ -10,8 +15,9 @@ function About() {
       <p className='aboutText'>
         We're dedicated to revolutionizing healthcare by making early detection of pneumonia accessible to everyone, bridging the gap between medical expertise and technological advancements.
       </p>
-
-      <div className='info'>
+      </ParallaxLayer>
+      <ParallaxLayer offset={0.75} speed={1}style={{zIndex:'0'}}>
+      <div className='info' style={{zIndex:'0'}}>
       <div>
             <h2 className='aboutTitle'>Why Choose Us?</h2>
             <h3 className='aboutSubtitle'>Swift Results:</h3> 
@@ -33,6 +39,9 @@ function About() {
             <h5 className='aboutText'>Get instant access to a detailed report, aiding in prompt medical decision-making.</h5>
         </div>
         </div>
+        </ParallaxLayer>
+       </Parallax>
+        <div style={{ height: `calc(${window.innerHeight}px)` }}></div>
       </div>
     )
 }
