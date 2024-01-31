@@ -1,6 +1,5 @@
 import '../Styles/contact.css';
 import * as Components from './Components.js';
-import { Parallax,ParallaxLayer } from '@react-spring/parallax';
 const EmailButton = ({ recipientEmail,name}) => {
     const handleSendEmail = () => {
       const subject = 'Feedback';
@@ -55,8 +54,6 @@ function Contact() {
                     <EmailButton recipientEmail='mohamedkamal@gmail.com' name='Mohamed'> </EmailButton>
                 </div>
             </div>
-            <div style={{ height: `2000px` }}></div>
-
         </div>
     )
 }

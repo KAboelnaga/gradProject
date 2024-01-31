@@ -7,6 +7,7 @@ import '../Styles/login-signup.css';
 const AuthForm = ({darkmode}) => {
   const [showForm, setShowForm] = useState(false);
   const [isDoctor, setIsDoctor] = useState(null);
+  const [isLogin, setIsLogin] = useState("login");
   const [loginEmail, setLoginEmail] = useState([]);
   const [loginPassword, setLoginPassword] = useState([]);
   const [lmessage, setlMessage] = useState('');
@@ -76,6 +77,10 @@ const AuthForm = ({darkmode}) => {
     const { value } = e.target;
     setIsDoctor(value);
   };
+  const handleForm = e =>{
+    const { value } = e.target;
+    setIsLogin(value);
+  }
   
   const handleChange = (e) => {
     const { name, value, type, checked, files } = e.target;
@@ -88,7 +93,7 @@ const AuthForm = ({darkmode}) => {
     }
   };
 const [signIn, toggle] = useState(true);
-
+console.log(isLogin === "login");
 return(
   <div className={`${darkmode === "true"? 'dark' : 'light'}`}>
     <div className='spacee large'></div>
@@ -180,11 +185,45 @@ return(
     </Components.Container>
     <div className='small'>
       <div className="bn40div">
-        <a className ="bn40" href="/">Login</a>
-        <a className ="bn40" href="/">Signup</a>
+        <button className ="bn40" value="login" onClick={handleForm}>Login</button>
+        <button className ="bn40" value="signup" onClick={handleForm}>Signup</button>
+        </div>
+        <div className={`${isLogin === 'login'? 'show':'hidden'}`}>
+        <div id='container'>
+        <form className="dropzone-box">
+        <h2 id='loginTitle'>Login</h2>
+        <div className="input-group">
+          <input className="input1" required autoComplete="off" type="text" name="username" id="username"/>
+          <label className="label1" htmlFor="username">Email</label>
+          <input className="input2" required autoComplete="off" type="password" name="password" id="password"/>
+          <label className="label2" htmlFor="password">password</label>
+        </div>
+            <button id="login" className={`${darkmode === 'true' ? 'dark' : 'light'}`}>
+                Login
+            </button>
+        </form>
+      </div>
+      </div>
+      <div className={`${isLogin === 'login'? 'hidden':'show'}`}>
+      <div id='container'>
+        <form className="dropzone-box">
+        <h2 id='loginTitle'>Signup</h2>
+        <div className="input-group">
+          <input className="input1" required autoComplete="off" type="text" name="username" id="username"/>
+          <label className="label1" htmlFor="username">Email</label>
+          <input className="input2" required autoComplete="off" type="password" name="password" id="password"/>
+          <label className="label2" htmlFor="password">Password</label>
+          <input className="input3" required autoComplete="off" type="password" name="password" id="password"/>
+          <label className="label3" htmlFor="password">Retype Password</label>
+        </div>
+            <button id="login" className={`${darkmode === 'true' ? 'dark' : 'light'}`}>
+                Login
+            </button>
+        </form>
+      </div>
       </div>
     </div>
-    
+    <div id='loginSpace'></div>
     </div>
 )
 }

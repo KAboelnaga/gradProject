@@ -106,7 +106,9 @@ div#imageContainer{
     color: var(--primary);
     cursor: pointer;
 }
-
+#uploadSpace{
+    margin-bottom: 18rem;
+}
 .dropzone-actions button[type='submit'] {
     background-color: var(--primary);
     border: 1px solid var(--primary);

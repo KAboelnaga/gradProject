@@ -70,6 +70,237 @@ label.selected{
       
       .bn40div {
         display: flex;
+        margin-bottom: 50px;
+      }
+      .main{
+        width: 100%;
+    }
+    #container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    #uploaded-image{
+        max-width:20 rem;
+        
+    }
+    .dropzone-box {
+        border-radius: 2rem;
+        padding: 2rem;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        display: flex;
+        justify-content: center;
+        max-width: 100vw;
+        align-items: center;
+        flex-direction: column;
+        background-color: rgb(20, 20, 20);
+        color: white;
+    }
+    .light .dropzone-box{
+        background-color: white;
+        color: black;
+        box-shadow: rgba(83, 83, 83, 0.2) 0px 8px 24px;
+    }
+    .dropzone-box h2 {
+        font-size: 2rem;
+        font-family: 'Orbitron','sans-serif';
+        margin-bottom: 0.5rem;
+    }
+    .spacee{
+        height: 200px;
+    }
+    #loginSpace{
+        margin-bottom: 20rem;
+    }
+    .dropzone-area {
+        padding: 1rem;
+        position: relative;
+        margin-top: 1rem;
+        min-height: 16rem;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border: 2px dashed var(--primary);
+        border-radius: 1rem;
+        color: var(--primary);
+        cursor: pointer;
+    }
+    
+    .dropzone-area [type="file"] {
+        cursor: pointer;
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+    
+    .dropzone-area .file-upload-icon svg {
+        height: 5rem;
+        width: 5rem;
+        margin-bottom: 0.5rem;
+        stroke: var(--primary);
+    }
+    
+    .dropzone--over {
+        border-style: solid;
+        background-color: var(--background);
+    }
+    
+    .dropzone-actions {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1.5rem;
+        margin-top: 1.5rem;
+        border-top: 1px solid var(--gray);
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    
+    .dropzone-actions button {
+        flex-grow: 1;
+        min-height: 3rem;
+        font-size: 1.2rem;
+    }
+    div#imageContainer{
+        width: 50vw;
+    }
+    #uploaded-image{
+        max-width: 100%;
+    }
+    .dropzone-actions button:hover {
+        text-decoration: underline;
+    }
+    
+    .dropzone-actions button[type='reset'] {
+        background-color: transparent;
+        border: 1px solid var(--gray);
+        border-radius: 0.5rem;
+        padding: 0.5rem 1rem;
+        color: var(--primary);
+        cursor: pointer;
+    }
+    #loginTitle{
+        margin-bottom: 3rem;
+    }
+    .dropzone-actions button[type='submit'] {
+        background-color: var(--primary);
+        border: 1px solid var(--primary);
+        border-radius: 0.5rem;
+        padding: 0.5rem 1rem;
+        color: var(--white);
+        cursor: pointer;
+    }
+    .message{
+        font-style: oblique;
+        font-weight: bold;
+    }
+    #resetButton{
+        background-color:  lightslategray;
+    }
+    .light #resetButton{
+        background-color: lightgray;
+    }
+    #submit-button{
+        background-color: rgb(12, 160, 209);
+    }
+    .light #submit-button{
+        background-color: skyblue;
+    }
+   
+    .show{
+        display: block;
+    }
+    
+    .input-group {
+        font-size: 1.25rem;
+        position: relative;
+        --primary: #2196f3;
       }
       
+      .input1 {
+        all: unset;
+        padding: 1rem;
+        border: 1px solid #9e9e9e;
+        border-radius: 10px;
+        transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+        margin-bottom: 2rem;
+        width: 90%;
+      }
+      .input2 {
+        all: unset;
+        padding: 1rem;
+        border: 1px solid #9e9e9e;
+        border-radius: 10px;
+        transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+        margin-bottom: 2rem;
+        width: 90%;
+      }
+      .input3 {
+        all: unset;
+        padding: 1rem;
+        border: 1px solid #9e9e9e;
+        border-radius: 10px;
+        transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+        margin-bottom: 2rem;
+        width: 90%;
+      }
+      
+      .label1 {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        pointer-events: none;
+        transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .label2 {
+        position: absolute;
+        top: 6.7rem;
+        left: 1rem;
+        color: #d4d4d4;
+        pointer-events: none;
+        transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .label3 {
+        position: absolute;
+        top: 12.4rem;
+        left: 1rem;
+        color: #d4d4d4;
+        pointer-events: none;
+        transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+      .input1:focus {
+        border: 1px solid var(--primary);
+      }
+      .input2:focus {
+        border: 1px solid var(--primary);
+      }
+      .input3:focus {
+        border: 1px solid var(--primary);
+      }
+      
+      .input1:is(:focus, :valid) ~ .label1 {
+        transform: translateY(-140%) scale(0.9);
+        background-color: transparent;
+        color: var(--primary);
+      }
+      .input2:is(:focus, :valid) ~ .label2 {
+        transform: translateY(-140%) scale(0.9);
+        background-color: transparent;
+        color: var(--primary);
+      }
+      .input3:is(:focus, :valid) ~ .label3 {
+        transform: translateY(-140%) scale(0.9);
+        background-color: transparent;
+        color: var(--primary);
+      }
+      .hidden{
+        display: none;
+    }
 }

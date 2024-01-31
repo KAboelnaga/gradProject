@@ -144,7 +144,7 @@ const Upload = ({ darkMode }) => {
           <p>{prediction}</p>
         </div>
       )}
-      <div className='spacee'></div>
+      <div id='uploadSpace'></div>
     </div>
   );
 };
