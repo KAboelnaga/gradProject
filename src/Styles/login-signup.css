@@ -6,12 +6,15 @@ label{
 .radd-cont{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 150px;
-    text-align: left;
 }
 .radd{
     display: none;
 
+}
+.labell{
+    text-align: center;
 }
 .radd-cont>label{
     padding: 2px;
@@ -30,6 +33,7 @@ label{
 label.selected{
     border-color: skyblue;
     color: skyblue ;
+
     font-weight: 600;
 }
 .cert{
@@ -300,6 +304,13 @@ label.selected{
         background-color: transparent;
         color: var(--primary);
       }
+      .labell{
+        text-align: center;
+    }
+    .radd-cont{
+        width: 70%;
+        gap: 200px;
+    }
       .hidden{
         display: none;
     }

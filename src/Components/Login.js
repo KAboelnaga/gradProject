@@ -25,47 +25,6 @@ const AuthForm = ({darkmode}) => {
     confirmPassword: '',
     certificateImage: null,
   });
-  const requestLogin = () => {
-    setLoginLoading(true);
-    const endpoint = 'https://sqlify-api-backend.espace.ws/users/sign_in';
-    const data = {
-      user: {
-        loginEmail, loginPassword
-      }
-    };
-    axios
-      .post(endpoint, data)
-      .then(response => {
-        setLoginMessage(response.data.message);
-        setLoginEmail(response.data.user.email);
-        setLoginLoading(false);
-        
-        loginNavigate('Mainpage', {
-          state: {
-            loginEmail
-          }
-        });
-      })
-      .catch(Error => {
-        console.error('Error:', Error.response.data.error);
-        setLoginError(Error.response.data.error);
-        setLoginLoading(false);
-        setLoginShow(true);
-      });
-  };
-  const loginEmailValidation = () => {
-    setlMessage('');
-    setLoginError('');
-    const regEx = /[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,8}(.[a-z{2,8}])?/g;
-    if (regEx.test(loginEmail)) {
-      requestLogin();
-    } else if (!regEx.test(loginEmail) && loginEmail !== '') {
-      setlMessage('Email format is incorrect');
-      setLoginShow(true);
-    } else {
-      setLoginMessage('');
-    }
-  };
   const handleOnChangeLoginEmail = e => {
     setLoginEmail(e.target.value);
   };
@@ -158,7 +117,7 @@ return(
                  <label>Password</label>
                  <Components.Input type='password' placeholder='Password' dark={darkmode} onChange={handleOnChangeLoginPassword}/>
                  <Components.Anchor href='#' dark={darkmode}>Forgot your password?</Components.Anchor>
-                 <Components.Button dark={darkmode} onClick={loginEmailValidation}>Sign In</Components.Button>
+                 <Components.Button dark={darkmode}>Sign In</Components.Button>
              </Components.Form>
         </Components.SignInContainer>
 
@@ -198,9 +157,7 @@ return(
           <input className="input2" required autoComplete="off" type="password" name="password" id="password"/>
           <label className="label2" htmlFor="password">password</label>
         </div>
-            <button id="login" className={`${darkmode === 'true' ? 'dark' : 'light'}`}>
-                Login
-            </button>
+        <Components.Button dark={darkmode}>Login</Components.Button>
         </form>
       </div>
       </div>
@@ -215,10 +172,39 @@ return(
           <label className="label2" htmlFor="password">Password</label>
           <input className="input3" required autoComplete="off" type="password" name="password" id="password"/>
           <label className="label3" htmlFor="password">Retype Password</label>
+          <div className='radd-cont'>
+          <label className={`labell${isDoctor === "doctor"? 'selected' : ''}`}>
+            <input className={`radd ${isDoctor === "doctor"? 'selected' : ''}`}type="radio"name="patientType"value="doctor"checked={setIsDoctor["doctor"]}onChange={handleRadioChange}/>
+            Doctor
+          </label>
+
+          <label className={`labell${isDoctor === "patient"? 'selected' : ''}`}>
+            <input
+              className={`radd ${isDoctor  === "patient"? 'selected' : ''}`}
+              type="radio"
+              name="patientType"
+              value="patient"
+              checked={setIsDoctor["patient"]}
+              onChange={handleRadioChange}
+            />
+            Patient
+          </label>
         </div>
-            <button id="login" className={`${darkmode === 'true' ? 'dark' : 'light'}`}>
-                Login
-            </button>
+        {isDoctor === "doctor"&& (
+          <label>
+            Certificate Image:
+            <input
+              className='cert'
+              type="file"
+              name="certificateImage"
+              onChange={handleChange}
+              accept="image/*"
+              required
+            />
+          </label>
+        )}
+        </div>
+        <Components.Button dark={darkmode}>Sign Up</Components.Button>
         </form>
       </div>
       </div>
