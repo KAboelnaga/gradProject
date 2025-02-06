@@ -1,3 +1,7 @@
+# gradProject
+i created the frontend of a website using reactJS. The website is mainly a pneoumoxpert that is linked to an AI model helps detecting pneumonia disease. The main purpose was to implement a decent UI/UX to be used ny patients.
+here is a recording for the website.
+https://youtu.be/Mo8w7-dJjP4
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -64,6 +68,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 ### Deployment
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
 
 ### `npm run build` fails to minify
 
