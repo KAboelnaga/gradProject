@@ -8,7 +8,7 @@ function Home() {
             <div className="horizontal-line"></div>
             <div className="intro">
             
-            <img id="animatedXray" src="xray.png" alt="Description of the"></img>
+            <img id="animatedXray" src={`${process.env.PUBLIC_URL}/assets/xray.png`} alt="Description of the"></img>
             <div>
             <h1 className='title1'>Welcome to our advanced Pneumonia Chest X-ray AI Scan platform! </h1>
             <h3 className='text1'>
@@ -21,34 +21,34 @@ function Home() {
             <h2 className='header'>How It Works</h2>
       <div className='flexx'>
       <div>
-      <img className="logo" src="upload.png" alt="Description of the"></img>
+      <img className="logo" src={`${process.env.PUBLIC_URL}/assets/upload.png`} alt="Description of the"></img>
         <p>Upload Your X-ray</p>
         </div>
         <div>
-        <img className="logo" src="ai2.png" alt="Description of the"></img>
+        <img className="logo" src={`${process.env.PUBLIC_URL}/assets/ai2.png`} alt="Description of the"></img>
         <p>AI Analysis</p>
         </div>
         <div>
-        <img className="logo" src="result.png" alt="Description of the"></img>
+        <img className="logo" src={`${process.env.PUBLIC_URL}/assets/result.png`} alt="Description of the"></img>
         <p>Instant Results</p>
         </div>
       </div>
       <h2 className='header'>Our Website Perks</h2>
       <div className='flexx'>
       <div>
-      <img src="ai.png" alt="Description of the"></img>
+      <img src={`${process.env.PUBLIC_URL}/assets/ai.png`} alt="Description of the"></img>
         <p>Advanced AI Technology</p>
         </div>
         <div>
-        <img className="logo" src="user.png" alt="Description of the"></img>
+        <img className="logo" src={`${process.env.PUBLIC_URL}/assets/user.png`} alt="Description of the"></img>
         <p>User-Friendly Interface</p>
         </div>
         <div>
-        <img className="logo" src="fast.png" alt="Description of the"></img>
+        <img className="logo" src={`${process.env.PUBLIC_URL}/assets/fast.png`} alt="Description of the"></img>
         <p>Fast and Efficient Results</p>
         </div>
         <div>
-        <img className="logo" src="secure.png" alt="Description of the"></img>
+        <img className="logo" src={`${process.env.PUBLIC_URL}/assets/secure.png`} alt="Description of the"></img>
         <p>Secure and Confidential</p>
         </div>
       </div>

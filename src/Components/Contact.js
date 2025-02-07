@@ -30,12 +30,12 @@ function Contact() {
             <h2 className='type'>Meet Our Web-Developers</h2>
             <div className='cards'>
                 <div>
-                    <img src='kareem2.png' alt='phot' className='personimage'></img>
+                    <img src={`${process.env.PUBLIC_URL}/assets/kareem2.png`} alt='phot' className='personimage'></img>
                     <h4 className='name'>Kareem Aboelnaga</h4>
                     <EmailButton recipientEmail='kaaboelnaga@gmail.com' name='Kareem'> </EmailButton>
                 </div>
                 <div>
-                    <img src='youssef2.png' alt='phot' className='personimage'></img>
+                    <img src={`${process.env.PUBLIC_URL}/assets/youssef2.png`} alt='phot' className='personimage'></img>
                     <h4 className='name'>Youssef Anan</h4>
                     <EmailButton recipientEmail='youssefanan@gmail.com' name='Youssef'> </EmailButton>
                 </div>
@@ -44,12 +44,12 @@ function Contact() {
             <h2 className='type'>Meet Our AI-Developers</h2>
             <div className='cards'>
                 <div>
-                    <img src='ahmed2.png' alt='phot' className='personimage'></img>
+                    <img src={`${process.env.PUBLIC_URL}/assets/ahmed2.png`} alt='phot' className='personimage'></img>
                     <h4 className='name'>Ahmed Youssry</h4>
                     <EmailButton recipientEmail='ahmedyoussry@gmail.com' name='Ahmed'> </EmailButton>
                 </div>
                 <div>
-                    <img src='mohamed2.png' alt='phot' className='personimage'></img>
+                    <img src={`${process.env.PUBLIC_URL}/assets/mohamed2.png`} alt='phot' className='personimage'></img>
                     <h4 className='name'>Mohamed Kamal</h4>
                     <EmailButton recipientEmail='mohamedkamal@gmail.com' name='Mohamed'> </EmailButton>
                 </div>
