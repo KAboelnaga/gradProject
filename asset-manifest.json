@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/pneumoxpert/static/css/main.e5220e4c.css",
-    "main.js": "/pneumoxpert/static/js/main.0972e90f.js",
+    "main.js": "/pneumoxpert/static/js/main.4eaa124b.js",
     "static/js/453.f549fa9b.chunk.js": "/pneumoxpert/static/js/453.f549fa9b.chunk.js",
     "index.html": "/pneumoxpert/index.html",
     "main.e5220e4c.css.map": "/pneumoxpert/static/css/main.e5220e4c.css.map",
-    "main.0972e90f.js.map": "/pneumoxpert/static/js/main.0972e90f.js.map",
+    "main.4eaa124b.js.map": "/pneumoxpert/static/js/main.4eaa124b.js.map",
     "453.f549fa9b.chunk.js.map": "/pneumoxpert/static/js/453.f549fa9b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e5220e4c.css",
-    "static/js/main.0972e90f.js"
+    "static/js/main.4eaa124b.js"
   ]
 }
