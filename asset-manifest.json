@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/pneumoxpert/static/css/main.5ca79f41.css",
-    "main.js": "/pneumoxpert/static/js/main.f2a35dee.js",
-    "static/js/787.364be887.chunk.js": "/pneumoxpert/static/js/787.364be887.chunk.js",
+    "main.css": "/pneumoxpert/static/css/main.b5436f4e.css",
+    "main.js": "/pneumoxpert/static/js/main.a08ada6c.js",
+    "static/js/453.f549fa9b.chunk.js": "/pneumoxpert/static/js/453.f549fa9b.chunk.js",
     "index.html": "/pneumoxpert/index.html",
-    "main.5ca79f41.css.map": "/pneumoxpert/static/css/main.5ca79f41.css.map",
-    "main.f2a35dee.js.map": "/pneumoxpert/static/js/main.f2a35dee.js.map",
-    "787.364be887.chunk.js.map": "/pneumoxpert/static/js/787.364be887.chunk.js.map"
+    "main.b5436f4e.css.map": "/pneumoxpert/static/css/main.b5436f4e.css.map",
+    "main.a08ada6c.js.map": "/pneumoxpert/static/js/main.a08ada6c.js.map",
+    "453.f549fa9b.chunk.js.map": "/pneumoxpert/static/js/453.f549fa9b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5ca79f41.css",
-    "static/js/main.f2a35dee.js"
+    "static/css/main.b5436f4e.css",
+    "static/js/main.a08ada6c.js"
   ]
 }
